@@ -54,7 +54,7 @@ class MyThred2 implements Runnable{
  3.使用Callable的方式时候需要用FutureTask<>进行包装（适配），FutureTask实现了Runnable和Future，
  通过future里面的get()方法来得到返回值。需要注意的是get()方法是阻塞的，就是说取不到值会使主线程一直等待。
  */
-//实现Callable接口实现多线程
+//实现Callable接口实现多线程方式
  class MyThread3 implements Callable<String>{
     public String call() throws Exception {
         return Thread.currentThread().getName()+": implements Callable<> 方式实现多线程";
